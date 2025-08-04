@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #216381;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+    }
+
+    .profile-card {
+      background-color: #a00303;
+      padding: 30px;
+      border-radius: 12px;
+      width: 350px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border: 2px solid #db6b6b;
+    }
+
+    .info {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-card">
+      <!-- Local image or online image link -->
+      <img src="" alt="Your Photo" class="profile-img" />
+      
+      <h1 id="name">Zaid Multani</h1>
+      <p id="bio">This is a short bio about me.</p>
+
+      <div class="info">
+        <h3>Contact</h3>
+        <p id="email">zaidmultani@gmail.com</p>
+        <p id="phone">+91 7869815125</p>
+      </div>
+
+      <div class="info">
+        <h3>Skills</h3>
+        <ul id="skills-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // You can update your profile details here
+    document.getElementById("name").textContent = "Zaid Multani";
+    document.getElementById("bio").textContent = "Frontend developer with 3 years of experience.";
+    document.getElementById("email").textContent = "zaidmultani946@gmail.com";
+    document.getElementById("phone").textContent = "+91-9876543210";
+
+    // Optional: Dynamic skill list
+    const skills = ["HTML", "CSS", "JavaScript", "React", "Bootstrap"];
+    const skillsList = document.getElementById("skills-list");
+    skillsList.innerHTML = "";
+    skills.forEach(skill => {
+      const li = document.createElement("li");
+      li.textContent = skill;
+      skillsList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
